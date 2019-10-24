@@ -27,7 +27,7 @@ int main() {
             cin >> foo;
             productions.push_back(foo);
         }
-
+          
         int counter = 3;
         string commonFactor = "";
         while (productions[0][counter] == productions[1][counter]) {
@@ -40,6 +40,7 @@ int main() {
             newProduction1 += ("|" + productions[i].substr(3));
         }
         cout << newProduction1 << endl;
+        cout<<"Production Rule : "<<newProduction1<<endl;
 
         string newProduction2 = lhs + "\'->";
         for (int i = 0; i < n; i++) {
